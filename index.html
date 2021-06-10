@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <!-- Box icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Donation -By Spark Foundation</title>
+  <style type="text/css">
+   
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #fff;
+  color: #243a6f;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.container-md {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  .container-md {
+    padding: 0 3rem;
+  }
+}
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.nav {
+  padding: 1.6rem 0;
+}
+
+.nav.fix-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d6e0f5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.nav.fix-nav .nav-link,
+.nav.fix-nav .logo,
+.nav.fix-nav .cart-icon,
+.nav.fix-nav .hamburger {
+  color: #fff;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  padding: 0.8rem 1rem;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-link.icon {
+  font-size: 3rem;
+}
+
+.top-nav {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.cart-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 40rem;
+    height: 100%;
+    background-color: #fff;
+    transition: all 500ms ease-in-out;
+    z-index: 100;
+  }
+
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #243a6f;
+    padding: 1rem 1.6rem;
+  }
+
+  
+
+  body.show::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+  }
+
+  .nav.show {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .nav-link.icon {
+    display: none;
+  }
+}
+
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  transform: translate(25%, -50%);
+}
+
+.hero-content h2 {
+  color: #b888ff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content .discount {
+  color: #fbb419;
+}
+
+.hero-content h1 span {
+  color: #253b70;
+  font-size: 6rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+  text-shadow: 3px 3px 0 #f1f1f1, 4px 4px 0 #f1f1f1;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fc7c7c;
+  padding: 1.2rem 4rem;
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header .hero-img {
+    right: -20%;
+  }
+
+  .hero-content {
+    transform: translate(20%, -50%);
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content h1 span {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 996px) {
+  .header {
+    min-height: 70vh;
+  }
+
+  .header .hero-img {
+    height: 40rem;
+    right: -10%;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .header {
+    min-height: 100vh;
+  }
+
+  .header .hero-img {
+    height: 40rem;
+    bottom: -15%;
+  }
+
+  .hero-content {
+    top: 40%;
+    transform: translate(15%, -50%);
+  }
+
+  .header .hero-img {
+    right: 0%;
+  }
+
+  .hero-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .hero-content h1 span {
+    font-size: 4rem;
+  }
+
+  .hero-content a {
+    padding: 1rem 3rem;
+  }
+}
+@media screen and (max-width: 600px){
+  #bar1{
+    display: none;
+  }
+
+}
+.list{
+      display: inline-flex;
+      float: right;
+      outline: 0px;
+    }
+ 
+  .topnav {
+  overflow: hidden;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.topnav a.active {
+  
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 790px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: flex;
+    text-align: right;
+    outline: 0px;
+    margin-left: 400px;
+    margin-right: 10px;
+  }
+}
+.navbar {
+  background-color: none;
+}
+
+.navbar a {
+  float: left;
+  font-size: 8px;
+  }
+  .aganist{
+    background-color: white;
+    width: 390px;
+    padding: 19px;
+  }
+  #raise{
+    background-color: #d9d9d9;
+    padding:50px;
+    width: ;
+  }
+.fa:hover {
+  color: red;
+   transform:scale(1.3);
+
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa {
+  padding: 15px;
+  font-size: 12px;
+  width: 40px;
+   height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 20px;
+}
+.footer{
+  background-color: #d6e0f5;
+    padding: 0px;
+    color: black;
+
+}
+#bar1:hover{
+  transform: scale(1.1);
+}
+form input[type="text"],input[type="number"]{
+      width: 300px;
+      height: 39px;
+      font-size: 17px;
+      border: 1px solid green;
+      outline: 0px;
+      margin: 4px;
+      border-radius: 0px;
+      background-color:  #f2f2f2;
+    }
+    #contact{
+      background-color:  #f2f2f2;
+      width: 500px;
+      height: 280px;
+      border: 1px solid green;
+
+              }
+.slideshow-container {
+  position: relative;
+  background:  #ffffff;
+}
+
+
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: orange;
+  color: white;
+}
+
+
+.dot-container {
+    text-align: center;
+    padding: 10px;
+    background: white;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+q {font-style: italic;}
+
+
+.author {color: cornflowerblue;}
+#buttons:hover{
+  transform: scale(1.1);
+}
+
+      </style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="home" class="header">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation container">
+        <div class="container" id="Foodie">
+
+<h1 style="color:orangered;font-family: Times New Roman;font-size: 30px;font-weight: 500;" ><b>Heart Foundation</b></h1>
+</div>
+           <div class="container">
+          <div class="topnav" id="myTopnav" style="float: right; padding: 5px;">
+                          <a href=""style="padding: 12px;margin-left: 10px;color: orangered;font-size: 19px;" id="bar1">Home</a>
+
+             <a href="http://localhost:8080/Donation/services.html"style="padding: 12px;margin-left: 10px;color: orangered;font-size: 19px;" id="bar1">Services</a>
+             
+            </div>
+           </div>      
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+              <h1>Donation</h1>
+            </div>
+            <div class="close">
+              <i class="bx bx-x"></i>
+            </div>
+          </div>
+
+
+        <a href="cart.html" class="cart-icon">
+          <i class="bx bx-shopping-bag"></i>
+        </a>
+
+        <div class="hamburger">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+ <img src="https://th.bing.com/th/id/OIP.qjjG2c6-er0AderzNkMFSAHaDF?pid=ImgDet&rs=1" alt="" class="hero-img" style="width:100%;height: 550px;" />
+
+    <div class="hero-content">
+   
+       <h1 style="color:white"><b>The time is to act now</b></h1>     
+       <h1 style="color: white"><b>Save the lifes</b></h1></h1>
+ <a href="https://rzp.io/l/BKjDB7hHQg" class="btn btn-danger" id="buttons"style="color:white;margin-top:35px;text-align: center;outline: 0px;">Donate Now</a>
+  
+    </div>
+  </header>
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  
+  <h3 style="color:red;margin-left:-102px;"><b>Mission:</b></h3>
+  <h3 style="margin-top:-8px;"><b>Treatment Centers</b></h3>
+  <p>Save critical patients who are fighting aganist Corona</p>
+  
+</div>
+   
+<div class="mySlides">
+  <h3 style="color:red;margin-left:-30px;"><b>Mission:</b></h3>
+  <h3 style="margin-top:-8px;"><b>Cash Relief</b></h3>
+  <p>Give Cash supports to famillies of Covid Deceased</p>
+
+</div>
+
+<div class="mySlides">
+<h3 style="color:red;margin-left:-70px;"><b>Mission:</b></h3>
+  <h3 style="margin-top:-8px;"><b>Meals & Ration</b></h3>
+  <p>Feed the people who are hunger during this covid</p>  
+</div>
+<div class="mySlides">
+<h3 style="color:red;margin-left:-50px;"><b>Mission:</b></h3>
+  <h3 style="margin-top:-8px;"><b>Oxygen SOS</b></h3>
+  <p>Give the Oxygen support to Covid critical patients</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+<span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  <div class="container" style="margin-top:0px;">
+  <div class="row">
+    <div class="col-sm-4" id="doorstep">
+      <img src="https://img.rasset.ie/000c3cbc-1600.jpg" width="100%" height="90%" style="border-radius: 5px;">
+            <a href="https://rzp.io/l/BKjDB7hHQg" class="btn btn-primary" id="buttons"style="color:white;margin-top:35px;text-align: center;outline: 0px;margin-left: 70px;">Donate Money</a>
+
+    </div>
+    <div class="col-sm-4" id="doorstep">
+      <img src="https://i0.wp.com/movingtips.wpengine.com/wp-content/uploads/2018/02/food-donations.jpg?fit=1024%2C684&ssl=1"width="100%" height="90%" style="border-radius: 5px;">
+      
+      <a href="http://localhost:8080/Donation/food.html" class="btn btn-primary" id="buttons" style="color:white;margin-top:35px;text-align: center;outline: 0px;margin-left: 70px;">Donate Meals</a>
+    </div>
+
+    <div class="col-sm-4" id="doorstep">
+  <img src="https://th.bing.com/th/id/OIP.LPFYq7kklLGcQVoCUpOhJgHaFA?pid=ImgDet&rs=1" width="100%" height="90%" style="border-radius: 5px;">
+      <a href="http://localhost:8080/Donation/medicine.html" class="btn btn-primary" id="buttons" style="color:white;margin-top:35px;text-align: center;outline: 0px;margin-left: 70px;">Donate medicines</a>
+
+
+    </div>
+    
+
+    
+  </div>
+  
+</div>
+<div class="container" style="margin-top:150px;">
+  <div class="row">
+    <div class="col-sm-4" id="doorstep">
+      <img src="https://cdn.givind.org/static/images/home/homev2/beneficiary-photo-icon.svg" width="40%" height="30%" style="border-radius: 5px;"><h4>We will provide you the details <br>of each rupee we spent</h4>
+
+
+    </div>
+    <div class="col-sm-4" id="doorstep">
+      <img src="https://cdn.givind.org/static/images/home/homev2/updates-icon.svg"width="40%" height="30%" style="border-radius: 5px;"><h4>Learn how you make changes in <br>their lives through our reports</h4>
+
+
+    </div>
+
+    <div class="col-sm-4" id="doorstep">
+  <img src="https://cdn.givind.org/static/images/home/homev2/Homepage+icons_impact.jpg" width="30%" height="32%" style="border-radius: 5px;"><h4>Your choice to give monthly will make<br> a long-lasting impact</h4>
+
+
+    </div>
+    
+
+    
+  </div>
+  
+</div>
+<div id="raise">
+<div class="container" >
+  <div class="row">
+    <div class="col-sm-6" >
+      <img src="https://i.ytimg.com/vi/YlFxtI8VhVo/maxresdefault.jpg" width="70%">
+      <div class="aganist">
+      <h3 >Raise Aganist Hunger</h3>
+      <p >
+        Rise Against Hunger is growing a global <br>movement to end hunger by empowering <br>communities, nourishing lives and <br>responding to emergencies. Make a Hands-On<br> Impact Why we're rising against hunger.<br> 2.8+ million. lives impacted by Rise Against<br> Hunger meals and other assistance in 2020.
+      </p>
+    </div>
+      
+    </div>
+    <div class="col-sm-6">
+      <h2 style="color:red">Mission</h2>
+      <p>One in three of the world’s malnourished children live in India. Our children are going to school hungry. They suffer from lack of concentration and reduced cognitive development, directly leading to their dropping out of school. Join us in our mission to prevent hunger diminishing our children’s opportunities to succeed.
+      India alone have more than 20 million orphan children and basic necessities like food and shelter is not provided to many as mentioned in our previous blog about Malnutrition and the importance of food donation
+       
+      </p>
+      
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+<div class="container" style="margin-top: 60px;">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active" style="width: 1200px;height: 300px;">
+        <img src="https://files.globalgiving.org/pfil/5067/ph_5067_93073.jpg?m=1479658881000" alt="" style="width:100%;">
+        <div class="carousel-caption">
+          
+        </div>
+      </div>
+
+      <div class="item"style="width: 1200px;height: 300px">
+        <img src="https://www.inquirer.com/resizer/0peAB47BNKydwgwzMxjN1dyNbAk=/1400x932/smart/arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/D2LTRFIHZZEXTAJ55QIZBWGJEU.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          
+        </div>
+      </div>
+    
+      <div class="item"style="width: 1200px;height: 300px;">
+        <img src="https://th.bing.com/th/id/R2261c604703bffcb46b7d2cac1ad2532?rik=0myebhLPFfgZHA&riu=http%3a%2f%2fthemes.zozothemes.com%2fcharity%2fwp-content%2fuploads%2fsites%2f9%2f2017%2f03%2fportfolio-cloth.jpg&ehk=SUS7FA2cK%2fKQlCjuJeobn3aJz7DYvMQnaRL%2fkEc%2fI%2fU%3d&risl=&pid=ImgRaw" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>  
+<div class="footer" style="margin-top: 30px;">
+   <div class="container" id="Foodie">
+
+<h1 style="color:orangered;font-family:Times New Roman; margin-top: 55px;font-size: 30px;font-weight: 500;  ;
+" ><b>Heart Foundation</b></h1>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4" style="margin-top:40px;">
+        <p style="color: black;font-size: 17px;margin-top: 30px;">
+          Heart Foundation is formed to help many people who are suffering due to lack of food<br>We used to collect donations in all over India<br>in order order to feed food We as a teams<br> used to find the people who are not having<br> parents we gather and provide them the<br> best future.Donate money and save people.
+
+        </p>        
+      </div>
+     
+      <div class="col-sm-4"  style="margin-left:190px;" id="contact">
+        <div style="margin-left:30px;">
+        <h2 style="color: red;margin-left: 70px;">Contact Us</h2>
+              <form action="contactus.php" method="post">
+        <input type="text" name="name" id="name" placeholder="Enter your name" required=""><br>
+        <input type="text" name="email" id="email" placeholder="Enter your mail Id" required=""><br>
+        <input type="number" name="number" required=""placeholder="Enter your number" required=""><br>
+            <button class="btn btn-primary"style="width: 310px; outline: 0px;margin-top:10px;">Submit</button>
+
+
+                
+              </form>
+              </div>  
+              </p>
+          </div>
+        
+          <div class="col-sm-4" style="margin-left: 600px;">
+         <h3 style="color: black;color: red">Follow Us</h3><br>
+         <p style="color: black;font-size: 17px;">Email:makeindia@gmail.com</p>
+
+         <a href="#" class="fa fa-facebook" ></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+</div>
+     
+       </div>
+  
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="./js/index.js"></script>
+  <script type="text/javascript">
+    const menu = document.querySelector(".menu");
+const navOpen = document.querySelector(".hamburger");
+const navClose = document.querySelector(".close");
+
+const navLeft = menu.getBoundingClientRect().left;
+navOpen.addEventListener("click", () => {
+  if (navLeft < 0) {
+    menu.classList.add("show");
+    document.body.classList.add("show");
+    navBar.classList.add("show");
+  }
+});
+
+navClose.addEventListener("click", () => {
+  if (navLeft < 0) {
+    menu.classList.remove("show");
+    document.body.classList.remove("show");
+    navBar.classList.remove("show");
+  }
+});
+
+// Fixed Nav
+const navBar = document.querySelector(".nav");
+const navHeight = navBar.getBoundingClientRect().height;
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
+    navBar.classList.add("fix-nav");
+  } else {
+    navBar.classList.remove("fix-nav");
+  }
+});
+
+// Scroll To
+const links = [...document.querySelectorAll(".scroll-link")];
+links.map(link => {
+  if (!link) return;
+  link.addEventListener("click", e => {
+    e.preventDefault();
+
+    const id = e.target.getAttribute("href").slice(1);
+
+    const element = document.getElementById(id);
+    const fixNav = navBar.classList.contains("fix-nav");
+    let position = element.offsetTop - navHeight;
+
+    window.scrollTo({
+      top: position,
+      left: 0,
+    });
+
+    navBar.classList.remove("show");
+    menu.classList.remove("show");
+    document.body.classList.remove("show");
+  });
+});
+
+gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
+gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 1, x: 20 });
+gsap.from(".hero-img", { opacity: 0, duration: 1, delay: 1.5, x: -200 });
+gsap.from(".hero-content h2", { opacity: 0, duration: 1, delay: 2, y: -50 });
+gsap.from(".hero-content h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
+gsap.from(".hero-content a", { opacity: 0, duration: 1, delay: 3.5, y: 50 });
+
+  </script>
+
+</body>
+
+</html>

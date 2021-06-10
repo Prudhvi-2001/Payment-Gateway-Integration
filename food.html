@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<style type="text/css">
+body{
+    background-color:  #e0e0d1;
+      background-image: url("https://d.newsweek.com/en/full/1550458/facebook-giving-tuesday-how.jpg");
+
+}
+    form input[type="text"],input[type="number"]{
+      width: 320px;
+      height: 33px;
+      font-size: 17px;
+      border: 1px solid green;
+      outline: 0px;
+      margin: 2px;
+    }
+    #bar1{
+        background-color: white;
+       padding: 30px;
+        width: 600px;
+        height: 535px;
+        border: 1px solid green;
+        margin-left: 700px;
+    }
+#btn{
+    margin-left: 110px;
+}
+
+@media screen and (max-width: 360px){
+    form input[type='text'] {
+        width: 260px;
+      height: 33px;
+    }
+}
+@media screen and (max-width: 360px){
+    #bar1{
+        width: 360px;
+      height: 600px;
+    }
+}
+#bar2:hover{
+    transform: scale(1.1);
+}
+        #true:hover {
+  color: red;
+   transform:scale(1.3);
+
+
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+#true {
+  padding: 15px;
+  font-size: 12px;
+  width: 40px;
+   height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 20px;
+}
+
+  </style>
+
+<body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<a href="http://localhost:8080/Donation/index.html" class="btn btn-danger btn-lg" style="margin-left: 1100px;margin-top: 40px;">Home</a>
+<div class="container" id="Foodie">
+<h1 style="color:orangered;font-family: Times New Roman; margin-top: -20px;font-size: 30px;font-weight: 500;" ><b>Heart Foundation</b></h1>
+
+</div>
+
+
+<div class="container">
+    
+             
+    <div class="row">
+        <div class="col-sm-4" style="margin-top:100px;">
+            <h1 style="color:black"><b>Donate Meals & Ration</b></h1>
+            <h3><b>Save lives with your Donation.</b></h3>
+            <div class="conatiner">
+                                    <h2 style="margin-top:40px;"><b>How it works?</b></h2>
+
+                <div class="row">
+                    <div class="col-sm-4" style="margin-top: 10px;" id="bar2">
+                        <img src="https://efccna.org/images/submit_icon.png" width="90%">
+                        
+                    </div>
+                    <div class="col-sm-4" style="margin-top: 10px;margin-left: 30px;" id="bar2">
+                        <img src="https://cdn.onlinewebfonts.com/svg/img_297947.png" width="80%">
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+  <div class="col-sm-4" style="margin-top: -420px;" id="bar1">
+<form action="donation_contact.php" method="post">
+    <label for="name"><i class="fa fa-user" aria-hidden="true" style="font-size: 18px;"></i> Full name</label><br>
+        <input type="text" name="name" id="name"><br>
+         <label for="name"><i class="fa fa-envelope" aria-hidden="true" style="font-size: 18px;"></i> Email</label><br>
+        <input type="text" name="email" id="email"><br>
+         <label for="name"><i class="fa fa-address-card-o" aria-hidden="true" style="font-size: 18px;"></i> Address</label><br>
+        <input type="text" name="address" id="address"><br>
+         <label for="name"><i class="fa fa-home" aria-hidden="true" style="font-size: 18px;"></i> City</label><br>
+        <input type="text" name="city" id="city"><br>
+         <label for="name">State</label><br>
+        <input type="text" name="state" id="state"><br>
+         <label for="name">Pincode</label><br>
+        <input type="text" name="pincode" id="pincode"><br>
+        <label for="feed">How many children you want to feed?</label><br>
+        <input type="number" name="feed" required=""><br>
+   <br>
+    <button class="btn btn-primary"style="width: 330px; outline: 0px;">Submit</button>
+</form>
+</div>
+
+    
+</div>
+</div>
+</div>
+<div class="col-sm-4" style="margin-left: 500px;margin-top: 50px;">
+         
+         <a href="#" class="fa fa-facebook" id="true"></a>
+<a href="#" class="fa fa-twitter" id="true"></a>
+<a href="#" class="fa fa-google" id="true"></a>
+<a href="#" class="fa fa-linkedin" id="true"></a>
+<a href="#" class="fa fa-youtube" id="true"></a>
+<a href="#" class="fa fa-instagram" id="true"></a>
+</div>
+</body>
+</html>
